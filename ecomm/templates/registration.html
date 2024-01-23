@@ -1,0 +1,60 @@
+
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <title>Registration Form</title>
+</head>
+<body>
+    <h1 align="center">Registration Form</h1>
+    <form method="POST">
+        {% csrf_token %}
+
+        <h6 align="center">{{ msg }}</h6>
+
+        <table border="1" align="center" class="table">
+            
+            <tr class="table-primary">
+                <th>Name</th>
+                <td class="table-primary"><input type="text" class="form-control" name="uname" id=""></td>
+            </tr>
+
+            <tr class="table-secondary">
+                <th>Email</th>
+                <td class="table-secondary"><input type="email" class="form-control" name="uemail" id=""></td>
+            </tr>
+
+            <tr class="table-info">
+                <th>Password</th>
+                <td class="table-info"><input type="password" class="form-control" name="upass" id=""></td>
+            </tr>
+
+            <tr class="table-danger">
+                <th>Confirm Password</th>
+                <td class="table-danger"><input type="password" class="form-control" name="cpass" id=""></td>
+            </tr>
+
+            <tr class="table-secondary">
+                <td colspan="2" align="center"><input class="btn btn-primary" type="submit" value="submit"></td>
+            </tr>
+            
+        </table>
+    </form>
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'js/popper.js' %}"></script>
+</body>
+</html>
